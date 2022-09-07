@@ -1,0 +1,20 @@
+{
+  "name": "typegen-import-error",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "xstate:typegen": "xstate typegen \"src/machines/**/*.ts\""
+  },
+  "devDependencies": {
+    "@xstate/cli": "^0.3.3",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0"
+  },
+  "dependencies": {
+    "xstate": "^4.33.5"
+  }
+}
