@@ -1,4 +1,5 @@
-import { assign, createMachine } from "xstate";
+import { createMachine } from "xstate";
+import { incrementCount } from "./actions";
 
 interface ToggleContext {
   count: number;
@@ -40,9 +41,8 @@ export const toggleMachine = createMachine(
   },
   {
     actions: {
-      incrementCount: assign((ctx) => ({
-        count: ctx.count + 1,
-      })),
+      // @ts-expect-error XState Typegen
+      incrementCount,
     },
   }
 );
